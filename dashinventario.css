@@ -1,0 +1,129 @@
+body {
+    background-color: #e4bc7c;
+    margin: 0;
+}
+
+.navbar {
+    background-color: antiquewhite; 
+}
+
+.menu {
+    display: flex;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 10px solid #e4bc7c;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80%;
+    
+}
+
+.dashboard{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 10px solid #e4bc7c;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1%;
+}
+
+
+.titulo {
+    background-color: antiquewhite;
+    text-align: center;
+    border-color: #f6f193;
+    border-width: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5%;
+    margin-right: 5%;
+    
+}
+
+#centro {
+    background-color: #fce4c4;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0.5%;
+}
+
+
+
+a {
+    all: unset;
+}
+
+.a {
+    margin-left: 3%;
+    margin-right: 12%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fce4c4;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;  
+  
+}
+
+.v{
+    padding: 1.2%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    background-color: antiquewhite;
+    bottom: 0;
+    width: 80%;
+    text-align: center;
+    transition: transform 0.3s;
+    margin-left: 10%;
+}
+table{
+    background-color: #818181;
+}

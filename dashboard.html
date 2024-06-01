@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Importe o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Importe o Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<!-- Bootstrap Navbar -->
+<nav class="navbar  navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Microspec Indústrias</a>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Botão para abrir a barra lateral -->
+                <button class="navbar-toggler" type="button" onclick="openNav()" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i> 
+                </button>
+            </div>
+        
+    </div>
+</nav>
+
+</nav>
+<!-- SideBar -->
+<nav>
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> <!-- Botão para fechar a navbar -->
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dashinventario.html">Inventário</a>    
+    </div>
+</nav>
+<!-- Corpo do site -->
+<div id="main" class="container-fluid">
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </div>
+            <span class="navbar-text">
+                <h1>Microspec Indústrias</h1>
+            </span>
+        </div>
+    </nav>
+    <!-- Cards -->
+    <section class="dashboard-cards">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <h5 class="card-title">Tipos de Máquinas</h5>
+                    <p class="card-value">3</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h5 class="card-title">Linha de produção por mês</h5>
+                    <p class="card-value">100</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h5 class="card-title">meses análisados até agora</h5>
+                    <p class="card-value">6</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h5 class="card-title">Avaliação da empresa</h5>
+                    <p class="card-value">8.5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="dashboard-charts">
+        <div class="row">
+            <div class="col-md-4">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="col-md-4">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="col-md-4">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer class="v mt-4">
+        <div class="footer bg-light py-3">
+            <h3 class="text-center">Copyright © 2024 Microspec Indústrias - Todos os direitos reservados. Proibida a reprodução total ou parcial sem prévia autorização (Inciso I do Artigo 29 Lei 9.610/98)</h3>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    // Chart.js scripts
+    var ctxBar = document.getElementById('barChart').getContext('2d');
+    var barChart = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+            labels: ['mês 1', 'mês 2', 'mês 3', 'mês 4', 'mês 5', 'mês 6'],
+            datasets: [{
+                label: 'Linhas de Produção',
+                data: [24, 30, 15, 30, 50, 90],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    var ctxLine = document.getElementById('lineChart').getContext('2d');
+    var lineChart = new Chart(ctxLine, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+                label: 'Linhas de produção',
+                data: [24, 30, 15, 30, 50, 90],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                fill: true
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    var ctxPie = document.getElementById('pieChart').getContext('2d');
+    var pieChart = new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: ['Máquina 1', 'Máquina 2', 'Máquina 3'],
+            datasets: [{
+                label: 'Comparação de Eficiência',
+                data: [12, 19, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
+</body>
+</html>

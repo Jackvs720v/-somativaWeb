@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Importe o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Importe o Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Meu CSS-->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+      <!-- SideBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Microspec Indústrias</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cliente.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Corpo do site -->
+        <div class="container mt-4">
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </div>
+                    <span class="navbar-text">
+                        <h1>Microspec Indústrias</h1>
+                    </span>
+                </div>
+            </nav>
+    
+        <article id="centro" class="mt-4">
+            <div class="a">
+                <h2>Contato</h2>
+                <p>Se você deseja saber mais sobre nossos produtos e serviços ou discutir como a Microspec Indústrias
+                    pode atender às suas necessidades específicas, entre em contato conosco:</p>
+                <ul>
+                    <li>Endereço: Rua das Inovações, 1234, São Paulo, SP, Brasil</li>
+                    <li>Telefone: +55 (11) 1234-5678</li>
+                    <li>Email: contato@microspec.com.br</li>
+                    <li>Website: <a href="http://www.microspec.com.br" target="_blank">www.microspec.com.br</a></li>
+                </ul>
+                <p><strong>Microspec Indústrias - Precisão em Miniatura, Inovação em Grande Escala.</strong></p>
+            </div>
+        </article>
+
+        <footer class="v mt-4">
+            <div class="footer bg-light py-3">
+                <h3 class="text-center">Copyright © 2024 Microspec Indústrias - Todos os direitos reservados. Proibida a reprodução total ou parcial sem prévia autorização (Inciso I do Artigo 29 Lei 9.610/98)</h3>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>

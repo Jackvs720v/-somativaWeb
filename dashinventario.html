@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Importe o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Importe o Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="dashinventario.css">
+</head>
+
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Microspec Indústrias </a>
+            <!-- Botão para abrir a barra lateral -->
+            <button class="navbar-toggler" type="button" onclick="openNav()" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- SideBar -->
+    <nav>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> <!-- Botão para fechar a navbar -->
+            <a href="dashboard.html">Dashboard</a>
+            <a href="dashinventario.html">Inventário</a>
+        </div>
+    </nav>
+    <!-- Corpo do site -->
+    <div id="main" class="container-fluid">
+       <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </div>
+            <span class="navbar-text">
+                <h1>Microspec Indústrias</h1>
+            </span>
+        </div>
+    </nav>
+        <!-- Tabelas -->
+        <section class="dashboard-tables">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <h5 class="text-center">Estoque Matéria-prima</h5>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Metal</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Plástico</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>Alumínio</td>
+                                <td>40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+            </div>
+        </section>        
+        <footer class="v">
+            <div class="footer">
+                <h3>Copyright © 2024 Microspec Indústrias - Todos os direitos reservados. Proibida a reprodução total ou
+                    parcial sem prévia autorização (Inciso I do Artigo 29 Lei 9.610/98)</h3>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>
