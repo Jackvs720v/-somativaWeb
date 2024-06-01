@@ -140,14 +140,6 @@ a {
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: fixed;
-    background-color: antiquewhite;
-    bottom: 0;
-    width: 80%;
-    text-align: center;
-    transition: transform 0.3s;
-    margin-left: 10%;
+    background-color: #e4bc7c;
+    text-align: center;
 }
