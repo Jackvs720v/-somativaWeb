@@ -126,9 +126,9 @@
     var barChart = new Chart(ctxBar, {
         type: 'bar',
         data: {
-            labels: ['mês 1', 'mês 2', 'mês 3', 'mês 4', 'mês 5', 'mês 6'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
             datasets: [{
-                label: 'Linhas de Produção',
+                label: 'Linhas de Produção por mês',
                 data: [24, 30, 15, 30, 50, 90],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -162,10 +162,10 @@
     var lineChart = new Chart(ctxLine, {
         type: 'line',
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            labels: ['Primeira semana', 'Segunda semana', 'Terceira semana', 'Quarta semana', 'Quinta semana', 'Sexta semana'],
             datasets: [{
-                label: 'Linhas de produção',
-                data: [24, 30, 15, 30, 50, 90],
+                label: 'Linhas de produção por semana',
+                data: [5, 10, 10, 4, 20, 5],
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1,
